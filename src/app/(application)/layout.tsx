@@ -1,8 +1,9 @@
 import '@mantine/core/styles.css';
 
-import '@mantine/carousel/styles.css';
+import React from 'react';
 import { Box, ColorSchemeScript, MantineProvider } from '@mantine/core';
-import LayoutBg from '@/module/_global/layout/layout_bg';
+import LayoutBackground from '@/module/_global/layout/layout_background';
+import '@mantine/carousel/styles.css';
 
 export const metadata = {
   title: 'Mantine Next.js template',
@@ -24,10 +25,9 @@ export default function RootLayout({ children }: { children: any }) {
       <body>
         <MantineProvider >
           <Box bg={"dark"} pos={"fixed"} h={"100%"} w={"100%"} style={{ overflowY: "auto"}}>
-            <LayoutBg>
+            <LayoutBackground>
               {children}
-            </LayoutBg>
-           
+            </LayoutBackground>
           </Box>
         </MantineProvider>
       </body>

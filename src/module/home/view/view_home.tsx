@@ -1,10 +1,20 @@
-import React from 'react';
-import HeaderHome from '../ui/header_home';
+import { Box, Stack } from '@mantine/core';
+import Bergerak from '../ui/bergerak';
+import Features from '../ui/features';
 
 function ViewHome() {
   return (
     <>
-    <HeaderHome/>
+      
+      <Box p={20}>
+        <Stack>
+          <Bergerak/>
+          <Features />
+          <Features />
+          
+        </Stack>
+      </Box>
+      
     </>
   );
 }
