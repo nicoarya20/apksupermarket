@@ -1,8 +1,8 @@
 import '@mantine/core/styles.css';
 
 import '@mantine/carousel/styles.css';
-import { Box, ColorSchemeScript, MantineProvider } from '@mantine/core';
-import LayoutBg from '@/module/_global/layout/layout_bg';
+import { ColorSchemeScript, MantineProvider } from '@mantine/core';
+import KosonganLogin from '@/module/_global/layout/kosongan_login';
 
 export const metadata = {
   title: 'Mantine Next.js template',
@@ -11,24 +11,22 @@ export const metadata = {
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export default function RootLayout({ children }: { children: any }) {
+
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning={true} >
       <head>
-        <ColorSchemeScript defaultColorScheme='dark' />
+        <ColorSchemeScript defaultColorScheme='light' />
         <link rel="shortcut icon" href="/favicon.svg" />
         <meta
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width, user-scalable=no"
         />
       </head>
-      <body>
-        <MantineProvider >
-          <Box bg={"dark"} pos={"fixed"} h={"100%"} w={"100%"} style={{ overflowY: "auto"}}>
-            <LayoutBg>
-              {children}
-            </LayoutBg>
-           
-          </Box>
+      <body suppressHydrationWarning={true}>
+        <MantineProvider defaultColorScheme='light' >
+          <KosonganLogin>
+            {children}
+          </KosonganLogin>
         </MantineProvider>
       </body>
     </html>

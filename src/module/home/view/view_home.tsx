@@ -10,8 +10,6 @@ function ViewHome() {
         <Stack>
           <Bergerak/>
           <Features />
-          <Features />
-          
         </Stack>
       </Box>
       
