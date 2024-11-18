@@ -1,17 +1,17 @@
+import { WARNA } from '@/module/_global/fun/WARNA';
 import { Box, Container, rem, Stack } from '@mantine/core';
 import React from 'react';
-import { WARNA } from '../fun/WARNA';
-import LayoutFeatures from './layout_features';
+import LayoutFD from './layout_f&d';
 
-function KosonganFeatures({ children }: { children: React.ReactNode }) {
+function KosonganFD({ children }: { children: React.ReactNode }) {
   return (
     <>
       <Stack align='center'>
         <Box bg={"light"} pos={"fixed"} h={"100%"} w={"100%"} style={{ overflowY: "auto" }}>
           <Container mih={"100vh"} p={0} size={rem(550)} bg={WARNA.bgApk}>
-            <LayoutFeatures>
+            <LayoutFD>
               {children}
-            </LayoutFeatures>
+            </LayoutFD>
           </Container>
         </Box>
       </Stack>
@@ -19,4 +19,5 @@ function KosonganFeatures({ children }: { children: React.ReactNode }) {
   );
 }
 
-export default KosonganFeatures;
+export default KosonganFD;
+

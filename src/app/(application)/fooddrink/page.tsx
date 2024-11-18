@@ -1,11 +1,11 @@
-import Content from "@/module/food&drink/ui/content";
+import ViewFD from "@/module/food&drink/view/view_f&d";
+
 
 function Page() {
   return (
-    <div>
-      <Content />
-      
-   </div>
+    <>
+      <ViewFD/>
+   </>
   );
 }
 
